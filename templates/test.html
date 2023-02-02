@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<h2 class='mp-test-title'>量产测试</h2>
+	 <style>
+		.mp-test-title {
+			color: green;
+			text-align: center;
+			font-size:50px;
+			border-bottom: 1px solid #ddd;
+		}
+	</style>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="">
+	<script>
+		//set element
+		var project_count = {{ size|safe }};
+		var project = {{ project|safe }}
+
+		var lable = document.createElement("label")
+		lable.innerText = "选择测试批次: "
+		document.body.appendChild(lable)
+
+		var select = document.createElement("select")
+		document.body.appendChild(select)
+
+		for (var i = 0; i < project_count; i++) {
+			var option = document.createElement("option");
+			option.innerText = project[i]
+			select.appendChild(option)
+		}
+	</script>
+</head>
+
+<body>
+	<!--[if lt IE 7]>
+				<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+			<![endif]-->
+	
+	<script src="" async defer></script>
+	</body>
+
+</html>
